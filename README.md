@@ -1,65 +1,33 @@
-### Prerequisites
+### Prerequisites(Ubuntu O.S.)
+- Docker and Docker compose installed
+# Install and Configure Setup
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y ca-certificates curl gnupg lsb-release
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+  sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) \
+  signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo usermod -aG docker $USER
+sudo chmod 666 /var/run/docker.sock
+# After Installation & configuration 
+docker compose up -d
+# Check Images and containers are running 
+docker images
+docker ps
 
-- NPM and Node.js installed
-- MongoDB cluster created and added to the system's environment variable
-
-### Installing
-
-Steps for Installing NPM modules on both client and server folders
-
-Execute these commands from the project directory
-
-```
+# if you want to run without docker 
 cd client && npm install
-```
-
-```
-cd server && npm install
-```
-
-### Running the app
-
-Open a terminal on server directory
-
-```
-npm start:dev
-```
-
-and open another terminal on client directory
-```
 npm start
-```
-
-
-### Access the web app on your system at http://localhost:3000/
-
-<hr>
-
-### Screenshots
-
-<p align="center">
-  <img src="./Screenshots/1.jpeg" alt="image"/>
-</p>
-
-<p align="center">
-  <img src="./Screenshots/2.jpeg" alt="image"/>
-</p>
-
-<p align="center">
-  <img src="./Screenshots/3.jpeg" alt="image"/>
-</p>
-
-<p align="center">
-  <img src="./Screenshots/4.jpeg" alt="image"/>
-</p>
-
-<p align="center">
-  <img src="./Screenshots/5.jpeg" alt="image"/>
-</p>
-
-<p align="center">
-  <img src="./Screenshots/6.jpeg" alt="image"/>
-</p>
+cd server && npm install
+npm start
 
 <hr>
 
@@ -68,3 +36,9 @@ As organs are needed ASAP for operations, time is the most crucial aspect. Howev
 The website makes the tedious manual task of categorizing different organs and making entries for each, mere clicks away. In a particular region, say n number of procurement centres and/or transplant centres exist. All of them can display the organs stored in their hypothermic storages along with their details at one time (this completely solvesthe time-consuming problem of individually calling of procurement centres one by one which is done presently). 
 
 Hospitals can request organs of suitable compatibility (Blood Group, etc) via the portal itself and make a payment which serves as a token of confirmation for the transfer procedure. Thereafter, the procurement centre has the option to confirm the request from their side.
+
+
+Special Thanks & Credit to this project **Kartik Katkar**
+**https://github.com/Kartik-Katkar**
+Original Repository 
+**https://github.com/Kartik-Katkar/OrganEase**
