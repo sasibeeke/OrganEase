@@ -69,8 +69,11 @@ The website makes the tedious manual task of categorizing different organs and m
 
 Hospitals can request organs of suitable compatibility (Blood Group, etc) via the portal itself and make a payment which serves as a token of confirmation for the transfer procedure. Thereafter, the procurement centre has the option to confirm the request from their side.
 
+## 🙌 Credits
 
-Special Thanks & Credit to this project **Kartik Katkar**
-**https://github.com/Kartik-Katkar**
- Original Repository 
-**https://github.com/Kartik-Katkar/OrganEase**
+Special thanks to **Kartik Katkar** for the original concept and implementation.
+
+- **GitHub Profile**: [@Kartik-Katkar](https://github.com/Kartik-Katkar)  
+- **Original Repository**: [OrganEase](https://github.com/Kartik-Katkar/OrganEase)
+
+---
