@@ -25,9 +25,9 @@ docker ps
 
 # if you want to run without docker 
 cd client && npm install
-npm start
+ npm start
 cd server && npm install
-npm start
+ npm start
 
 <hr>
 
@@ -40,5 +40,5 @@ Hospitals can request organs of suitable compatibility (Blood Group, etc) via th
 
 Special Thanks & Credit to this project **Kartik Katkar**
 **https://github.com/Kartik-Katkar**
-Original Repository 
+ Original Repository 
 **https://github.com/Kartik-Katkar/OrganEase**
