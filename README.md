@@ -53,10 +53,15 @@ sudo chmod 666 /var/run/docker.sock
   docker ps
 
 🧪 Running Without Docker (Local Dev)
+git clone https://github.com/Kartik-Katkar/OrganEase.git
+cd OrganEase
+
+🖥️ Frontend
 cd client
 npm install
 npm start
 
+🧪 Backend
 cd server
 npm install
 npm start
