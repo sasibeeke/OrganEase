@@ -62,6 +62,12 @@ npm install
 npm start
 Make sure MongoDB is installed and running locally for this setup.
 
+Access the Application
+Component	URL
+🖥️ Frontend	http://<EC2_PUBLIC_IP>:3000
+🧪 API Test	http://<EC2_PUBLIC_IP>:5000/api/signup (via Postman or curl)
+
+
 <hr>
 As organs are needed ASAP for operations, time is the most crucial aspect. However, the existing method to request organs from procurement centre/ transplant centres is completely manual (manual data entry, manual communication via faxes, mails, phone calls) and thus is obviously error prone and time consuming. Therefore to solve this grave issue, 'OrganEase' is proposed.
 
