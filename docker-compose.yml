@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo:6
+    container_name: organease-mongo
+    volumes:
+      - mongo-data:/data/db
+    restart: unless-stopped
+
+  server:
+    build:
+      context: ./server
+    container_name: organease-server
+    ports:
+      - 5000:5000
+    env_file:
+      - ./server/.env
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  client:
+    build:
+      context: ./client
+    container_name: organease-client
+    ports:
+      - 3000:80
+    depends_on:
+      - server
+    restart: unless-stopped
+
+volumes:
+  mongo-data:
