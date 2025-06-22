@@ -48,7 +48,7 @@ sudo chmod 666 /var/run/docker.sock
 
 🚀 Running the App with Docker
   docker compose up -d
-Check if everything is running
+🔍 Check if everything is running
   docker images        
   docker ps
 
